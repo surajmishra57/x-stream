@@ -15,7 +15,7 @@ public class Q40 {
         Supplier<Stream<String>> nameStream = () -> names.stream();
         //Consumption 1
         nameStream.get().forEach(System.out::println);
-        //Consumption 2
+        //Consumption example 2
         long listSize = nameStream.get().count();
         System.out.println();
         System.out.println(listSize);

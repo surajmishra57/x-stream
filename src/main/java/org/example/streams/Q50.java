@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 /**
  * Calculate average of age of male and female of employees |Most Asked Interview
+ *
  */
 public class Q50 {
 
@@ -14,10 +15,11 @@ public class Q50 {
         Emp e2 = new Emp("Bob", "bob@gamil.com", 35, "M");
         Emp e3 = new Emp("Cindy", "cindy@gamil.com", 33, "F");
         Emp e4 = new Emp("Diana", "diana@gamil.com", 45, "F");
-        Emp e5 = new Emp("tom", "tom@gamil.com", 55, "F");
+        Emp e5 = new Emp("tom", "tom@gamil.com", 55, "M");
         List<Emp> emps = Arrays.asList(e1, e2, e3, e4, e5);
         var res = emps.stream().collect(Collectors.groupingBy(Emp::getGender, Collectors.averagingInt(Emp::getAge)));
         System.out.println(res);
+
     }
 
 }
